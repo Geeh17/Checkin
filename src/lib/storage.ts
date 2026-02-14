@@ -20,7 +20,7 @@ const KEY = "participantes";
 export function normalizarNome(valor: string) {
   return valor
     .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-zA-Z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
