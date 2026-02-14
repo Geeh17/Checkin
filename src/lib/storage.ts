@@ -32,6 +32,7 @@ function store() {
   const token = process.env.NETLIFY_BLOBS_TOKEN;
 
   if (siteID && token) {
+    // assinatura alternativa suportada pelo runtime da Netlify
     // @ts-ignore
     return getStore("checkin", { siteID, token });
   }
@@ -39,49 +40,82 @@ function store() {
   return getStore("checkin");
 }
 
-export async function readParticipantes(): Promise<Participante[]> {
-  try {
-    const s = store();
-    const data: any = await s.get(KEY, { type: "json" as any });
+/** Normaliza/migra registros antigos (sem quebrar compatibilidade) */
+function normalizeList(input: any): Participante[] {
+  const arr = Array.isArray(input) ? input : [];
+  return arr.map((p: any) => {
+    const nomeCompleto = String(p?.nomeCompleto ?? "");
+    const nomeNormalizado = String(
+      p?.nomeNormalizado ?? normalizarNome(nomeCompleto),
+    );
+    const id = String(p?.id ?? "");
 
-    const arr = Array.isArray(data)
-      ? data
-      : typeof data === "string"
-        ? JSON.parse(data)
-        : data == null
-          ? []
-          : [];
-
-    return arr.map((p: any) => ({
+    return {
       ...p,
+      id,
+      nomeCompleto,
+      nomeNormalizado,
       tipo: p?.tipo === "APOIO" ? "APOIO" : "PARTICIPANTE",
       equipe: p?.equipe ?? null,
       checkinRealizado: Boolean(p?.checkinRealizado),
       checkinEm: p?.checkinEm ?? null,
-    })) as Participante[];
-  } catch {}
+    } as Participante;
+  });
+}
 
+function readLocal(): Participante[] {
   if (!fs.existsSync(LOCAL_JSON_PATH)) return [];
   const raw = JSON.parse(fs.readFileSync(LOCAL_JSON_PATH, "utf-8"));
+  return normalizeList(raw);
+}
 
-  return (Array.isArray(raw) ? raw : []).map((p: any) => ({
-    ...p,
-    tipo: p?.tipo === "APOIO" ? "APOIO" : "PARTICIPANTE",
-    equipe: p?.equipe ?? null,
-    checkinRealizado: Boolean(p?.checkinRealizado),
-    checkinEm: p?.checkinEm ?? null,
-  })) as Participante[];
+export async function readParticipantes(): Promise<Participante[]> {
+  // 1) tenta Blob
+  try {
+    const s = store();
+    const data: any = await s.get(KEY, { type: "json" as any });
+
+    let arr: any[] = [];
+    if (Array.isArray(data)) arr = data;
+    else if (typeof data === "string") arr = JSON.parse(data);
+    else arr = [];
+
+    const normalized = normalizeList(arr);
+
+    // ✅ 2) Se o Blob estiver vazio, faz bootstrap do JSON local e salva no Blob
+    if (normalized.length === 0) {
+      const local = readLocal();
+      if (local.length > 0) {
+        try {
+          await s.set(KEY, JSON.stringify(local));
+        } catch {
+          // se não conseguir salvar, pelo menos devolve local
+        }
+        return local;
+      }
+    }
+
+    return normalized;
+  } catch {
+    // 3) fallback local
+    return readLocal();
+  }
 }
 
 export async function writeParticipantes(lista: Participante[]): Promise<void> {
+  const payload = JSON.stringify(normalizeList(lista));
+
+  // 1) tenta Blob
   try {
     const s = store();
-    await s.set(KEY, JSON.stringify(lista));
+    await s.set(KEY, payload);
     return;
-  } catch {}
+  } catch {
+    // 2) fallback local
+  }
 
   fs.mkdirSync(path.dirname(LOCAL_JSON_PATH), { recursive: true });
-  fs.writeFileSync(LOCAL_JSON_PATH, JSON.stringify(lista, null, 2));
+  fs.writeFileSync(LOCAL_JSON_PATH, payload);
 }
 
 export function makeRecordFromName(
@@ -91,8 +125,8 @@ export function makeRecordFromName(
 ): Participante {
   const nomeNormalizado = normalizarNome(nomeCompleto);
   return {
-    id,
-    nomeCompleto,
+    id: String(id),
+    nomeCompleto: String(nomeCompleto),
     nomeNormalizado,
     tipo,
     equipe: null,
