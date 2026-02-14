@@ -1,0 +1,58 @@
+# =========================
+# Dependências
+# =========================
+node_modules/
+.pnp/
+.pnp.js
+
+# =========================
+# Next.js
+# =========================
+.next/
+out/
+build/
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# =========================
+# Variáveis de ambiente
+# =========================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# =========================
+# Cache / Ferramentas
+# =========================
+.cache/
+.turbo/
+.vercel/
+
+# =========================
+# Coverage / Testes
+# =========================
+coverage/
+
+# =========================
+# Sistema Operacional
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.swp
