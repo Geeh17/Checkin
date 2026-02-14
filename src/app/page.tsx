@@ -491,6 +491,18 @@ export default function Home() {
                 >
                   🔴 <b>VERMELHO:</b> {resumo.VERMELHO}
                 </div>
+                <div
+                  style={{
+                    padding: 12,
+                    borderRadius: 12,
+                    border: "1px solid #1f2937",
+                    marginTop: 6,
+                    fontWeight: 900,
+                  }}
+                >
+                  👥 <b>Total:</b>{" "}
+                  {resumo.LARANJA + resumo.VERDE + resumo.VERMELHO}
+                </div>
               </div>
             )}
           </div>
