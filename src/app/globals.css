@@ -1,0 +1,48 @@
+/* ====== ESTILO DE TELA (se você quiser manter) ====== */
+.print-scroll {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+/* ====== ESTILO DE IMPRESSÃO / PDF ====== */
+@media print {
+  /* remove headers/btns do modal na impressão */
+  .no-print {
+    display: none !important;
+  }
+
+  /* remove scroll interno: o PDF precisa "ver" todo conteúdo */
+  .print-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* evita barra e corta sombras/bordas exageradas */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* garante que o modal não force altura fixa */
+  .modal, .modal-content, .print-root {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* quebra de página melhor */
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* evita quebrar um card no meio quando possível */
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 12mm;
+  }
+}

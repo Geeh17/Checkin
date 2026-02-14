@@ -27,7 +27,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  // ===== Resumo (contagem por equipe) =====
+  // ===== Resumo =====
   const [openResumo, setOpenResumo] = useState(false);
   const [resumo, setResumo] = useState<any>(null);
 
@@ -120,7 +120,6 @@ export default function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q]);
 
-  // helper: lista por equipe no relatório
   function listaEquipe(equipe: Equipe) {
     return relatorio
       .filter((p) => p.equipe === equipe)
@@ -535,11 +534,11 @@ export default function Home() {
               border: "1px solid #1f2937",
               borderRadius: 16,
               padding: 16,
-              maxHeight: "85vh",
-              overflow: "auto",
             }}
           >
+            {/* ✅ Tudo que não deve ir pro PDF */}
             <div
+              className="no-print"
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -609,67 +608,95 @@ export default function Home() {
               </div>
             </div>
 
-            <div style={{ marginTop: 10, opacity: 0.8, fontSize: 13 }}>
+            <div
+              className="no-print"
+              style={{ marginTop: 10, opacity: 0.8, fontSize: 13 }}
+            >
               Dica: clique em <b>Gerar PDF</b> e escolha “Salvar como PDF”.
             </div>
 
+            {/* ✅ Área EXATA que será impressa */}
             <div
+              id="relatorio-print"
+              className="report-scroll"
               style={{
                 marginTop: 12,
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-                gap: 12,
+                padding: 12,
+                borderRadius: 14,
+                border: "1px solid #1f2937",
+                background: "#0b1220",
               }}
             >
-              {(["LARANJA", "VERDE", "VERMELHO"] as const)
-                .filter((e) => filtroEquipe === "TODOS" || filtroEquipe === e)
-                .map((equipe) => {
-                  const lista = listaEquipe(equipe);
-                  return (
-                    <div
-                      key={equipe}
-                      style={{
-                        padding: 12,
-                        borderRadius: 14,
-                        border: "1px solid #1f2937",
-                      }}
-                    >
-                      <div style={{ fontWeight: 900, marginBottom: 8 }}>
-                        {equipe} —{" "}
-                        <span style={{ opacity: 0.8 }}>
-                          {lista.length} pessoa(s)
-                        </span>
-                      </div>
+              {/* Cabeçalho só no PDF */}
+              <div className="print-only" style={{ marginBottom: 12 }}>
+                <div style={{ fontSize: 16, fontWeight: 900 }}>
+                  Check-in UMADJUF
+                </div>
+                <div style={{ fontSize: 12, opacity: 0.8 }}>
+                  Gerado em: {new Date().toLocaleString("pt-BR")}
+                </div>
+                <hr style={{ marginTop: 10 }} />
+              </div>
 
-                      {lista.length === 0 ? (
-                        <div style={{ opacity: 0.8, fontSize: 13 }}>
-                          Nenhum participante nesta equipe.
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                  gap: 12,
+                }}
+              >
+                {(["LARANJA", "VERDE", "VERMELHO"] as const)
+                  .filter((e) => filtroEquipe === "TODOS" || filtroEquipe === e)
+                  .map((equipe, idx) => {
+                    const lista = listaEquipe(equipe);
+                    return (
+                      <div
+                        key={equipe}
+                        className={`avoid-break ${idx === 2 ? "page-break" : ""}`}
+                        style={{
+                          padding: 12,
+                          borderRadius: 14,
+                          border: "1px solid #1f2937",
+                          background: "#0f172a",
+                        }}
+                      >
+                        <div style={{ fontWeight: 900, marginBottom: 8 }}>
+                          {equipe} —{" "}
+                          <span style={{ opacity: 0.8 }}>
+                            {lista.length} pessoa(s)
+                          </span>
                         </div>
-                      ) : (
-                        <ol style={{ margin: 0, paddingLeft: 18 }}>
-                          {lista.map((p) => (
-                            <li key={p.id} style={{ marginBottom: 6 }}>
-                              {p.nomeCompleto}
-                              <span
-                                style={{
-                                  marginLeft: 8,
-                                  opacity: 0.8,
-                                  fontSize: 12,
-                                }}
-                              >
-                                {p.checkinRealizado ? "✅" : "⏳"}
-                              </span>
-                            </li>
-                          ))}
-                        </ol>
-                      )}
-                    </div>
-                  );
-                })}
-            </div>
 
-            <div style={{ marginTop: 14, opacity: 0.8, fontSize: 13 }}>
-              Total carregado: <b>{relatorio.length}</b>
+                        {lista.length === 0 ? (
+                          <div style={{ opacity: 0.8, fontSize: 13 }}>
+                            Nenhum participante nesta equipe.
+                          </div>
+                        ) : (
+                          <ol style={{ margin: 0, paddingLeft: 18 }}>
+                            {lista.map((p) => (
+                              <li key={p.id} style={{ marginBottom: 6 }}>
+                                {p.nomeCompleto}
+                                <span
+                                  style={{
+                                    marginLeft: 8,
+                                    opacity: 0.8,
+                                    fontSize: 12,
+                                  }}
+                                >
+                                  {p.checkinRealizado ? "✅" : "⏳"}
+                                </span>
+                              </li>
+                            ))}
+                          </ol>
+                        )}
+                      </div>
+                    );
+                  })}
+              </div>
+
+              <div style={{ marginTop: 14, opacity: 0.8, fontSize: 13 }}>
+                Total carregado: <b>{relatorio.length}</b>
+              </div>
             </div>
           </div>
         </div>

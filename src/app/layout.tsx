@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Check-in UMADJUF",
   description: "Check-in por nome com equipe e persistência",
