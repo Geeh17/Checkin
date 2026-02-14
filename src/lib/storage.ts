@@ -1,6 +1,3 @@
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
-
 import fs from "fs";
 import path from "path";
 import { getStore } from "@netlify/blobs";
