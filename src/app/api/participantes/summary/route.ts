@@ -1,23 +1,36 @@
 import { NextResponse } from "next/server";
 import { readParticipantes } from "@/lib/storage";
 
+const EQUIPES = ["LARANJA", "VERDE", "VERMELHO"] as const;
+
 export async function GET() {
   const participantes = await readParticipantes();
 
-  const summary = {
-    LARANJA: 0,
-    VERDE: 0,
-    VERMELHO: 0,
-    SEM_EQUIPE: 0,
-    TOTAL: participantes.length,
-  };
+  // ✅ conta somente PARTICIPANTE (APOIO fica fora)
+  const somenteParticipantes = participantes.filter(
+    (p: any) => (p?.tipo || "PARTICIPANTE") === "PARTICIPANTE",
+  );
 
-  for (const p of participantes) {
-    if (p.equipe === "LARANJA") summary.LARANJA++;
-    else if (p.equipe === "VERDE") summary.VERDE++;
-    else if (p.equipe === "VERMELHO") summary.VERMELHO++;
-    else summary.SEM_EQUIPE++;
+  const counts: Record<string, number> = { LARANJA: 0, VERDE: 0, VERMELHO: 0 };
+  let semEquipe = 0;
+
+  for (const p of somenteParticipantes) {
+    if (p.equipe && (counts as any)[p.equipe] !== undefined) {
+      counts[p.equipe] += 1;
+    } else {
+      semEquipe += 1;
+    }
   }
 
-  return NextResponse.json({ summary });
+  const total = somenteParticipantes.length;
+
+  return NextResponse.json({
+    summary: {
+      LARANJA: counts.LARANJA,
+      VERDE: counts.VERDE,
+      VERMELHO: counts.VERMELHO,
+      SEM_EQUIPE: semEquipe,
+      TOTAL: total,
+    },
+  });
 }
