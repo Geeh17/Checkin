@@ -183,9 +183,9 @@
     "id": "21",
     "nomeCompleto": "Caju",
     "nomeNormalizado": "caju",
-    "equipe": null,
-    "checkinRealizado": false,
-    "checkinEm": null,
+    "equipe": "VERDE",
+    "checkinRealizado": true,
+    "checkinEm": "2026-02-14T08:00:56.446Z",
     "tipo": "PARTICIPANTE"
   },
   {
@@ -813,9 +813,9 @@
     "id": "91",
     "nomeCompleto": "Carlos Eduardo Fernandes da Silva",
     "nomeNormalizado": "carlos eduardo fernandes da silva",
-    "equipe": null,
-    "checkinRealizado": false,
-    "checkinEm": null,
+    "equipe": "VERMELHO",
+    "checkinRealizado": true,
+    "checkinEm": "2026-02-14T08:00:50.623Z",
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1625,8 +1625,8 @@
     "nomeNormalizado": "priscila",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
-    "checkinEm": null
+    "checkinRealizado": true,
+    "checkinEm": "2026-02-14T08:00:43.902Z"
   },
   {
     "id": "182",

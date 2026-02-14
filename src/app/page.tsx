@@ -140,7 +140,7 @@ export default function Home() {
         }}
       >
         <div>
-          <h1 style={{ margin: 0, fontSize: 28 }}>Check-in do Evento</h1>
+          <h1 style={{ margin: 0, fontSize: 28 }}>Check-in Umadjuf 2026</h1>
           <p style={{ margin: "6px 0 0", opacity: 0.8 }}>
             Digite o nome (mín. 2 letras). Clique em “Fazer check-in”.
           </p>
