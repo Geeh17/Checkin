@@ -3,45 +3,45 @@
     "id": "1",
     "nomeCompleto": "Karolaien",
     "nomeNormalizado": "karolaien",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:03.745Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "2",
     "nomeCompleto": "Andreia Margaret (mãe da Karolaine",
     "nomeNormalizado": "andreia margaret mae da karolaine",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:37:22.225Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "3",
     "nomeCompleto": "Gabriella da Silva Querino",
     "nomeNormalizado": "gabriella da silva querino",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:37:51.431Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "4",
     "nomeCompleto": "Emanuelly Gail de Almeida",
     "nomeNormalizado": "emanuelly gail de almeida",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:43.215Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "5",
     "nomeCompleto": "Gabriel Pereira Gaspar Silva",
     "nomeNormalizado": "gabriel pereira gaspar silva",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:28.685Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -49,7 +49,7 @@
     "nomeCompleto": "Isaac Martins De Sousa Motta",
     "nomeNormalizado": "isaac martins de sousa motta",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -58,7 +58,7 @@
     "nomeCompleto": "Saulo Rezende dos Reis",
     "nomeNormalizado": "saulo rezende dos reis",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -67,7 +67,7 @@
     "nomeCompleto": "Cauã de Oliveira Navarro Assis",
     "nomeNormalizado": "caua de oliveira navarro assis",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -76,7 +76,7 @@
     "nomeCompleto": "Thamires de Oliveira Navarro Elias",
     "nomeNormalizado": "thamires de oliveira navarro elias",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -85,7 +85,7 @@
     "nomeCompleto": "Ezequiel Mendes de Jesus",
     "nomeNormalizado": "ezequiel mendes de jesus",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -94,7 +94,7 @@
     "nomeCompleto": "Mateus Marcos",
     "nomeNormalizado": "mateus marcos",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -103,7 +103,7 @@
     "nomeCompleto": "João Henrique Fernandes de Oliveira",
     "nomeNormalizado": "joao henrique fernandes de oliveira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -111,27 +111,27 @@
     "id": "13",
     "nomeCompleto": "Clara Fernandes De Oliveira",
     "nomeNormalizado": "clara fernandes de oliveira",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:29.586Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "14",
     "nomeCompleto": "Nicolas Ferreira Sant'Ana",
     "nomeNormalizado": "nicolas ferreira sant ana",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:16.595Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "15",
     "nomeCompleto": "Afonso Santiago Peroni",
     "nomeNormalizado": "afonso santiago peroni",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:16.302Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -139,7 +139,7 @@
     "nomeCompleto": "Miriã da Silva Severino albano",
     "nomeNormalizado": "miria da silva severino albano",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -147,63 +147,63 @@
     "id": "17",
     "nomeCompleto": "Lorenzo Gabriel Severino albano",
     "nomeNormalizado": "lorenzo gabriel severino albano",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:46.943Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "18",
     "nomeCompleto": "Isabelle Victoria Severino albano",
     "nomeNormalizado": "isabelle victoria severino albano",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:23.157Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "19",
     "nomeCompleto": "Isabella da Silva Coelho",
     "nomeNormalizado": "isabella da silva coelho",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:22.372Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "20",
     "nomeCompleto": "Davianna De los Angeles Carmona Arias",
     "nomeNormalizado": "davianna de los angeles carmona arias",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:32.115Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "21",
     "nomeCompleto": "Caju",
     "nomeNormalizado": "caju",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:00:56.446Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "22",
     "nomeCompleto": "Niara Oliveira",
     "nomeNormalizado": "niara oliveira",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:20.113Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "23",
     "nomeCompleto": "Gabriel dos Santos Souza",
     "nomeNormalizado": "gabriel dos santos souza",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:44.126Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -211,7 +211,7 @@
     "nomeCompleto": "Vinicius Oliveira Rosseti",
     "nomeNormalizado": "vinicius oliveira rosseti",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -219,9 +219,9 @@
     "id": "25",
     "nomeCompleto": "Julyana da Silva Cortes",
     "nomeNormalizado": "julyana da silva cortes",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:13.401Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -229,7 +229,7 @@
     "nomeCompleto": "Julia da Silva cortes",
     "nomeNormalizado": "julia da silva cortes",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -238,7 +238,7 @@
     "nomeCompleto": "Weverton Carelli Cortes",
     "nomeNormalizado": "weverton carelli cortes",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -247,7 +247,7 @@
     "nomeCompleto": "Keyla Dias Fernandes",
     "nomeNormalizado": "keyla dias fernandes",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -256,7 +256,7 @@
     "nomeCompleto": "Brendo Marco Silva sobrinho",
     "nomeNormalizado": "brendo marco silva sobrinho",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -265,7 +265,7 @@
     "nomeCompleto": "Esther Kenedy de Araújo Santos",
     "nomeNormalizado": "esther kenedy de araujo santos",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -274,7 +274,7 @@
     "nomeCompleto": "Samuel Leonardo do Carmo Campos",
     "nomeNormalizado": "samuel leonardo do carmo campos",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -282,9 +282,9 @@
     "id": "32",
     "nomeCompleto": "Pamela Suellen de Oliveira",
     "nomeNormalizado": "pamela suellen de oliveira",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:26.709Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -292,7 +292,7 @@
     "nomeCompleto": "Solimar Helena de Oliveira",
     "nomeNormalizado": "solimar helena de oliveira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -300,9 +300,9 @@
     "id": "34",
     "nomeCompleto": "Janaína Gonçalves dos Santos Motta",
     "nomeNormalizado": "janaina goncalves dos santos motta",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:12.646Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -310,7 +310,7 @@
     "nomeCompleto": "Lucas Silva Santos Motta",
     "nomeNormalizado": "lucas silva santos motta",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -319,7 +319,7 @@
     "nomeCompleto": "Marianna Silva Santos Motta",
     "nomeNormalizado": "marianna silva santos motta",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -327,18 +327,18 @@
     "id": "37",
     "nomeCompleto": "Amauri Fernandes Mizael de Almeida",
     "nomeNormalizado": "amauri fernandes mizael de almeida",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:17.103Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "38",
     "nomeCompleto": "Gabriel Silva Damasceno",
     "nomeNormalizado": "gabriel silva damasceno",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:47.514Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -346,7 +346,7 @@
     "nomeCompleto": "Ester Souza Reis",
     "nomeNormalizado": "ester souza reis",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -355,7 +355,7 @@
     "nomeCompleto": "Letícia Gomes Rezende",
     "nomeNormalizado": "leticia gomes rezende",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -364,7 +364,7 @@
     "nomeCompleto": "Maria Eduarda Emília de Assis",
     "nomeNormalizado": "maria eduarda emilia de assis",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -373,7 +373,7 @@
     "nomeCompleto": "Vanessa Eduarda Luiza da Silva",
     "nomeNormalizado": "vanessa eduarda luiza da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -381,9 +381,9 @@
     "id": "43",
     "nomeCompleto": "Mayla Margarida de Jesus Alipio Coutinho",
     "nomeNormalizado": "mayla margarida de jesus alipio coutinho",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:45.449Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -391,7 +391,7 @@
     "nomeCompleto": "João Victor de Jesus Alipio Coutinho",
     "nomeNormalizado": "joao victor de jesus alipio coutinho",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -400,7 +400,7 @@
     "nomeCompleto": "Ludmila Nazareth Miguel",
     "nomeNormalizado": "ludmila nazareth miguel",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -408,9 +408,9 @@
     "id": "46",
     "nomeCompleto": "Gabriel Gomes Gustodio",
     "nomeNormalizado": "gabriel gomes gustodio",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:49.522Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -418,7 +418,7 @@
     "nomeCompleto": "Ryan Matheus Alves Reis",
     "nomeNormalizado": "ryan matheus alves reis",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -427,7 +427,7 @@
     "nomeCompleto": "Viviane Cristina de Farias",
     "nomeNormalizado": "viviane cristina de farias",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -436,7 +436,7 @@
     "nomeCompleto": "Alvaro Mimura Amaral",
     "nomeNormalizado": "alvaro mimura amaral",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -445,7 +445,7 @@
     "nomeCompleto": "Maria Fernanda Caetano Gesicki",
     "nomeNormalizado": "maria fernanda caetano gesicki",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -453,9 +453,9 @@
     "id": "51",
     "nomeCompleto": "Ana Clara Lopes Laier",
     "nomeNormalizado": "ana clara lopes laier",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:01.607Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -463,7 +463,7 @@
     "nomeCompleto": "Clarice Lopes Laier",
     "nomeNormalizado": "clarice lopes laier",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -472,7 +472,7 @@
     "nomeCompleto": "Matheus Rodrigues",
     "nomeNormalizado": "matheus rodrigues",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -481,7 +481,7 @@
     "nomeCompleto": "Samuel Motta da Silva",
     "nomeNormalizado": "samuel motta da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -489,45 +489,45 @@
     "id": "55",
     "nomeCompleto": "Isabella Motta da Silva",
     "nomeNormalizado": "isabella motta da silva",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:20.891Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "56",
     "nomeCompleto": "Ana Livia Nascimento",
     "nomeNormalizado": "ana livia nascimento",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:11.369Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "57",
     "nomeCompleto": "Lavinia ferreira raimundo",
     "nomeNormalizado": "lavinia ferreira raimundo",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:23.784Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "58",
     "nomeCompleto": "Ana Carolina amorim Luciano",
     "nomeNormalizado": "ana carolina amorim luciano",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:53:56.693Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "59",
     "nomeCompleto": "Ana Luiza de Paula Ananias Pury",
     "nomeNormalizado": "ana luiza de paula ananias pury",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:38:09.080Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -535,7 +535,7 @@
     "nomeCompleto": "Miguel Oliveira da silva",
     "nomeNormalizado": "miguel oliveira da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -544,7 +544,7 @@
     "nomeCompleto": "Pedro Alonso da Silva",
     "nomeNormalizado": "pedro alonso da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -552,18 +552,18 @@
     "id": "62",
     "nomeCompleto": "Bernardo de Souza Santos Araujo",
     "nomeNormalizado": "bernardo de souza santos araujo",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:22.380Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "63",
     "nomeCompleto": "Beatriz de Souza Santos Araujo",
     "nomeNormalizado": "beatriz de souza santos araujo",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:19.471Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -571,7 +571,7 @@
     "nomeCompleto": "João Vitor Fernandes de Assis",
     "nomeNormalizado": "joao vitor fernandes de assis",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -580,7 +580,7 @@
     "nomeCompleto": "Mateus Dias Fernandes",
     "nomeNormalizado": "mateus dias fernandes",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -589,7 +589,7 @@
     "nomeCompleto": "Saraliz Matheus Inácio da Silva",
     "nomeNormalizado": "saraliz matheus inacio da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -598,7 +598,7 @@
     "nomeCompleto": "Arthur Alves da Costa",
     "nomeNormalizado": "arthur alves da costa",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -606,9 +606,9 @@
     "id": "68",
     "nomeCompleto": "Beatriz Ferreira Maia",
     "nomeNormalizado": "beatriz ferreira maia",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:17.837Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -616,7 +616,7 @@
     "nomeCompleto": "Luan Bruno Custódio Raimundo",
     "nomeNormalizado": "luan bruno custodio raimundo",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -625,7 +625,7 @@
     "nomeCompleto": "Rayssa Nogueira Ferro",
     "nomeNormalizado": "rayssa nogueira ferro",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -633,9 +633,9 @@
     "id": "71",
     "nomeCompleto": "Rhana Vitória Nogueira ferro",
     "nomeNormalizado": "rhana vitoria nogueira ferro",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:14.800Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -643,7 +643,7 @@
     "nomeCompleto": "Nathan da Cruz Almeida",
     "nomeNormalizado": "nathan da cruz almeida",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -651,18 +651,18 @@
     "id": "73",
     "nomeCompleto": "Mariana da Cruz Almeida",
     "nomeNormalizado": "mariana da cruz almeida",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:05.537Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "74",
     "nomeCompleto": "Kesynara Aparecida Do Nascimento",
     "nomeNormalizado": "kesynara aparecida do nascimento",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:25.164Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -670,7 +670,7 @@
     "nomeCompleto": "Odaciele Vitória",
     "nomeNormalizado": "odaciele vitoria",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -678,9 +678,9 @@
     "id": "76",
     "nomeCompleto": "Jaqueline de Paula",
     "nomeNormalizado": "jaqueline de paula",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:38:08.067Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -688,7 +688,7 @@
     "nomeCompleto": "Evelyn Freitas Pereira",
     "nomeNormalizado": "evelyn freitas pereira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -696,27 +696,27 @@
     "id": "78",
     "nomeCompleto": "Caio Alexandro dos Santos Silva",
     "nomeNormalizado": "caio alexandro dos santos silva",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:28.141Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "79",
     "nomeCompleto": "Benaia dos Santos silva",
     "nomeNormalizado": "benaia dos santos silva",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:26.445Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "80",
     "nomeCompleto": "JHENNIFER PEREIRA PASSINHO CUSTODIO",
     "nomeNormalizado": "jhennifer pereira passinho custodio",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:27.700Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -724,7 +724,7 @@
     "nomeCompleto": "Rafael da Silva Custódio",
     "nomeNormalizado": "rafael da silva custodio",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -733,7 +733,7 @@
     "nomeCompleto": "Lucas Torres Faier Esquerdo",
     "nomeNormalizado": "lucas torres faier esquerdo",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -742,7 +742,7 @@
     "nomeCompleto": "Thiago de Oliveira Sodre",
     "nomeNormalizado": "thiago de oliveira sodre",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -751,7 +751,7 @@
     "nomeCompleto": "Sophia de Sá Nascimento",
     "nomeNormalizado": "sophia de sa nascimento",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -760,7 +760,7 @@
     "nomeCompleto": "Julia Veloso Almeida Ramos Silva",
     "nomeNormalizado": "julia veloso almeida ramos silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -769,7 +769,7 @@
     "nomeCompleto": "Laura Veloso Almeida Ramos da Silva",
     "nomeNormalizado": "laura veloso almeida ramos da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -778,7 +778,7 @@
     "nomeCompleto": "Emanuelly Vitória Custódio",
     "nomeNormalizado": "emanuelly vitoria custodio",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -787,7 +787,7 @@
     "nomeCompleto": "Clarissa de Lima Carvalho",
     "nomeNormalizado": "clarissa de lima carvalho",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -796,7 +796,7 @@
     "nomeCompleto": "Josué Almeida da silva",
     "nomeNormalizado": "josue almeida da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -805,7 +805,7 @@
     "nomeCompleto": "Wanessa Emidio Goularte",
     "nomeNormalizado": "wanessa emidio goularte",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -813,18 +813,18 @@
     "id": "91",
     "nomeCompleto": "Carlos Eduardo Fernandes da Silva",
     "nomeNormalizado": "carlos eduardo fernandes da silva",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:00:50.623Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "92",
     "nomeCompleto": "Erilayne Gabriela Fernandes da Silva",
     "nomeNormalizado": "erilayne gabriela fernandes da silva",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:51.504Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -832,7 +832,7 @@
     "nomeCompleto": "Josafá Almeida da Silva",
     "nomeNormalizado": "josafa almeida da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -841,7 +841,7 @@
     "nomeCompleto": "Everaldo Dias Junior",
     "nomeNormalizado": "everaldo dias junior",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -850,7 +850,7 @@
     "nomeCompleto": "Maria Isabel Lopes Dias",
     "nomeNormalizado": "maria isabel lopes dias",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -858,9 +858,9 @@
     "id": "96",
     "nomeCompleto": "Raquel Segala de Almeida",
     "nomeNormalizado": "raquel segala de almeida",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:46.240Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -868,7 +868,7 @@
     "nomeCompleto": "Sara dos Santos Ferreira",
     "nomeNormalizado": "sara dos santos ferreira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -876,27 +876,27 @@
     "id": "98",
     "nomeCompleto": "Maria Fernanda Querino Araújo",
     "nomeNormalizado": "maria fernanda querino araujo",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:37:54.716Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "99",
     "nomeCompleto": "Júlio Cesar Querino Araújo",
     "nomeNormalizado": "julio cesar querino araujo",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:37:55.828Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "100",
     "nomeCompleto": "Luís Roberto Querino Araújo",
     "nomeNormalizado": "luis roberto querino araujo",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:37:53.386Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -904,7 +904,7 @@
     "nomeCompleto": "Stephany Victoria Oliveira Rodrigues",
     "nomeNormalizado": "stephany victoria oliveira rodrigues",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -913,7 +913,7 @@
     "nomeCompleto": "Matheus Izan Oliveira Rodrigues",
     "nomeNormalizado": "matheus izan oliveira rodrigues",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -922,7 +922,7 @@
     "nomeCompleto": "Raiane de lima Machado",
     "nomeNormalizado": "raiane de lima machado",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -930,45 +930,45 @@
     "id": "104",
     "nomeCompleto": "ARTHUR FERREIRA SANT ANA",
     "nomeNormalizado": "arthur ferreira sant ana",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:08.611Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "105",
     "nomeCompleto": "Isabella da Silva Chaves",
     "nomeNormalizado": "isabella da silva chaves",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:19.973Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "106",
     "nomeCompleto": "Izabela Ketlyng Arcanjo",
     "nomeNormalizado": "izabela ketlyng arcanjo",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:21.650Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "107",
     "nomeCompleto": "Ana Clara Fraga Gandra",
     "nomeNormalizado": "ana clara fraga gandra",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:02.849Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "108",
     "nomeCompleto": "Benjamim Roberto de Almeida Silva",
     "nomeNormalizado": "benjamim roberto de almeida silva",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:14:19.003Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -976,7 +976,7 @@
     "nomeCompleto": "Hadassah Carolina Oliveira Almeida",
     "nomeNormalizado": "hadassah carolina oliveira almeida",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -985,7 +985,7 @@
     "nomeCompleto": "Augusto Brígida Rocha",
     "nomeNormalizado": "augusto brigida rocha",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -993,9 +993,9 @@
     "id": "111",
     "nomeCompleto": "Juliana Rocha de Souza",
     "nomeNormalizado": "juliana rocha de souza",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:09.946Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1003,7 +1003,7 @@
     "nomeCompleto": "Diego Dornelas da Silva",
     "nomeNormalizado": "diego dornelas da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1011,18 +1011,18 @@
     "id": "113",
     "nomeCompleto": "Ana Carolina Barbosa",
     "nomeNormalizado": "ana carolina barbosa",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:53:59.791Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "114",
     "nomeCompleto": "Carlos Eduardo Antunes Ramos",
     "nomeNormalizado": "carlos eduardo antunes ramos",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:24.456Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1030,7 +1030,7 @@
     "nomeCompleto": "Breno Maulaz",
     "nomeNormalizado": "breno maulaz",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1039,7 +1039,7 @@
     "nomeCompleto": "Jacqueline de Souza Carvalho Lourenço",
     "nomeNormalizado": "jacqueline de souza carvalho lourenco",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1048,7 +1048,7 @@
     "nomeCompleto": "Rebeca de Almeida",
     "nomeNormalizado": "rebeca de almeida",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1057,7 +1057,7 @@
     "nomeCompleto": "Lucas Ferreira da Silva",
     "nomeNormalizado": "lucas ferreira da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1066,7 +1066,7 @@
     "nomeCompleto": "Ualife Murilo",
     "nomeNormalizado": "ualife murilo",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1075,7 +1075,7 @@
     "nomeCompleto": "Bruno de Aguiar Silva",
     "nomeNormalizado": "bruno de aguiar silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1084,7 +1084,7 @@
     "nomeCompleto": "Thaís dos Santos Teixeira",
     "nomeNormalizado": "thais dos santos teixeira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1093,7 +1093,7 @@
     "nomeCompleto": "João Lucas de Souza Ribeiro",
     "nomeNormalizado": "joao lucas de souza ribeiro",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1101,9 +1101,9 @@
     "id": "123",
     "nomeCompleto": "Joao Pedro da Rocha Leite",
     "nomeNormalizado": "joao pedro da rocha leite",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:52:58.939Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1111,7 +1111,7 @@
     "nomeCompleto": "Rebecca de Oliveira Raimundo",
     "nomeNormalizado": "rebecca de oliveira raimundo",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1120,7 +1120,7 @@
     "nomeCompleto": "Joao Luis Rodrigues Junior",
     "nomeNormalizado": "joao luis rodrigues junior",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1129,7 +1129,7 @@
     "nomeCompleto": "Jamilly",
     "nomeNormalizado": "jamilly",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1138,7 +1138,7 @@
     "nomeCompleto": "Daniel Jose dos Santos",
     "nomeNormalizado": "daniel jose dos santos",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1147,7 +1147,7 @@
     "nomeCompleto": "Lucas Daniel",
     "nomeNormalizado": "lucas daniel",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1156,7 +1156,7 @@
     "nomeCompleto": "Samuel Henrique Pecanha",
     "nomeNormalizado": "samuel henrique pecanha",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1164,9 +1164,9 @@
     "id": "130",
     "nomeCompleto": "Miguel Angelo Pecanha",
     "nomeNormalizado": "miguel angelo pecanha",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:48:27.416Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1174,7 +1174,7 @@
     "nomeCompleto": "Laura Moreira Fernandes",
     "nomeNormalizado": "laura moreira fernandes",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1183,7 +1183,7 @@
     "nomeCompleto": "Guilherme Vasconcelos Marques da Silva",
     "nomeNormalizado": "guilherme vasconcelos marques da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1192,7 +1192,7 @@
     "nomeCompleto": "Gustavo Vasconcelos Marques da Silva",
     "nomeNormalizado": "gustavo vasconcelos marques da silva",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1201,7 +1201,7 @@
     "nomeCompleto": "Riquelme Anderson de Oliveira",
     "nomeNormalizado": "riquelme anderson de oliveira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1210,7 +1210,7 @@
     "nomeCompleto": "Jennifer da Silva Oliveira",
     "nomeNormalizado": "jennifer da silva oliveira",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1218,18 +1218,18 @@
     "id": "136",
     "nomeCompleto": "Kayky Luiz Alves de Amorim",
     "nomeNormalizado": "kayky luiz alves de amorim",
-    "equipe": "LARANJA",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:56:02.588Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
     "id": "137",
     "nomeCompleto": "Ana Luiza Alves Amorim",
     "nomeNormalizado": "ana luiza alves amorim",
-    "equipe": "VERMELHO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:07.882Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1237,7 +1237,7 @@
     "nomeCompleto": "Ingrid Penaqui Tortura",
     "nomeNormalizado": "ingrid penaqui tortura",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1246,7 +1246,7 @@
     "nomeCompleto": "Melissa Vitoria iranda de Carvalho",
     "nomeNormalizado": "melissa vitoria iranda de carvalho",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1255,7 +1255,7 @@
     "nomeCompleto": "Miguel Fernandes Maciel",
     "nomeNormalizado": "miguel fernandes maciel",
     "equipe": null,
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
@@ -1263,9 +1263,9 @@
     "id": "141",
     "nomeCompleto": "Ana Julia",
     "nomeNormalizado": "ana julia",
-    "equipe": "VERDE",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T06:54:06.662Z",
+    "equipe": null,
+    "checkinRealizado": null,
+    "checkinEm": null,
     "tipo": "PARTICIPANTE"
   },
   {
@@ -1274,8 +1274,8 @@
     "nomeNormalizado": "geraldo luiz da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:48:01.796Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "143",
@@ -1283,8 +1283,8 @@
     "nomeNormalizado": "luciana carolina bernardo peroni",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:54.559Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "144",
@@ -1292,7 +1292,7 @@
     "nomeNormalizado": "jonatas roque souza",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1301,8 +1301,8 @@
     "nomeNormalizado": "rosalia aparecida dias fernandes",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:54:01.331Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "146",
@@ -1310,8 +1310,8 @@
     "nomeNormalizado": "gabriele nazareth de souza stefani",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:49:38.437Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "147",
@@ -1319,7 +1319,7 @@
     "nomeNormalizado": "renata amorim luciano",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1328,7 +1328,7 @@
     "nomeNormalizado": "jeferson isac pereira da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1337,7 +1337,7 @@
     "nomeNormalizado": "karen inacio",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1346,7 +1346,7 @@
     "nomeNormalizado": "alexandra maria emilia xandinha",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1355,7 +1355,7 @@
     "nomeNormalizado": "hudson paiva de souza",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1364,7 +1364,7 @@
     "nomeNormalizado": "ney da costa luciano",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1373,7 +1373,7 @@
     "nomeNormalizado": "rodrigo borges esquerdo",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1382,8 +1382,8 @@
     "nomeNormalizado": "juliana grace torres faier",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:56.349Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "155",
@@ -1391,7 +1391,7 @@
     "nomeNormalizado": "emanuel carlos ramos da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1400,7 +1400,7 @@
     "nomeNormalizado": "tharcila veloso de almeida",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1409,7 +1409,7 @@
     "nomeNormalizado": "danniele oliveira da silva lino",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1418,7 +1418,7 @@
     "nomeNormalizado": "raquel marques da silva nascimento",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1427,7 +1427,7 @@
     "nomeNormalizado": "everaldo dias",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1436,7 +1436,7 @@
     "nomeNormalizado": "elizangela cristina lopes da silva dias",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1445,7 +1445,7 @@
     "nomeNormalizado": "andre izan acunha rodrigues",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1454,7 +1454,7 @@
     "nomeNormalizado": "roberta barbosa de oliveira",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1463,7 +1463,7 @@
     "nomeNormalizado": "rachel carolina oliveira almeida",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1472,7 +1472,7 @@
     "nomeNormalizado": "paulo roberto da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1481,7 +1481,7 @@
     "nomeNormalizado": "darlan de oliveira lino",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1490,7 +1490,7 @@
     "nomeNormalizado": "rafael amaral",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1499,7 +1499,7 @@
     "nomeNormalizado": "thalinne campos de lima amaral",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1508,7 +1508,7 @@
     "nomeNormalizado": "josue de araujo furtado",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1517,7 +1517,7 @@
     "nomeNormalizado": "alyne aparecida de souza",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1526,7 +1526,7 @@
     "nomeNormalizado": "jonas rodrigues da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1535,8 +1535,8 @@
     "nomeNormalizado": "geandro amancio da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:48:33.011Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "172",
@@ -1544,8 +1544,8 @@
     "nomeNormalizado": "amanda kellen ferreira santos silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:28:55.899Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "173",
@@ -1553,7 +1553,7 @@
     "nomeNormalizado": "isaias da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1562,8 +1562,8 @@
     "nomeNormalizado": "dayana vasconcelos marques da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:50.116Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "175",
@@ -1571,7 +1571,7 @@
     "nomeNormalizado": "sarah pereira gaspar",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1580,7 +1580,7 @@
     "nomeNormalizado": "fabio madeira da silva",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1589,7 +1589,7 @@
     "nomeNormalizado": "luiz paulo de amorim alves",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1598,7 +1598,7 @@
     "nomeNormalizado": "edpaula alves amorim",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1607,7 +1607,7 @@
     "nomeNormalizado": "herik vinicius moreira de souza",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1616,8 +1616,8 @@
     "nomeNormalizado": "leticia nascentes de souza",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:49:34.329Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "181",
@@ -1625,8 +1625,8 @@
     "nomeNormalizado": "priscila",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:00:43.902Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "182",
@@ -1634,7 +1634,7 @@
     "nomeNormalizado": "josefina",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1643,8 +1643,8 @@
     "nomeNormalizado": "juliana",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:51.899Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "184",
@@ -1652,7 +1652,7 @@
     "nomeNormalizado": "matilde alves",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1661,7 +1661,7 @@
     "nomeNormalizado": "pedro alves",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1670,8 +1670,8 @@
     "nomeNormalizado": "aline",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T07:49:15.719Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "187",
@@ -1679,7 +1679,7 @@
     "nomeNormalizado": "daniel",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1688,8 +1688,8 @@
     "nomeNormalizado": "janaina",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:48.308Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "189",
@@ -1697,7 +1697,7 @@
     "nomeNormalizado": "deise",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1706,7 +1706,7 @@
     "nomeNormalizado": "marcelo",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1715,8 +1715,8 @@
     "nomeNormalizado": "ana claudia",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": true,
-    "checkinEm": "2026-02-14T08:13:42.591Z"
+    "checkinRealizado": null,
+    "checkinEm": null
   },
   {
     "id": "192",
@@ -1724,7 +1724,7 @@
     "nomeNormalizado": "ale",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1733,7 +1733,7 @@
     "nomeNormalizado": "eliza",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1742,7 +1742,7 @@
     "nomeNormalizado": "ozeias evaristo",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   },
   {
@@ -1751,7 +1751,7 @@
     "nomeNormalizado": "joao miguel",
     "equipe": null,
     "tipo": "APOIO",
-    "checkinRealizado": false,
+    "checkinRealizado": null,
     "checkinEm": null
   }
 ]
