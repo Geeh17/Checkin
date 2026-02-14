@@ -1,43 +1,69 @@
 import { NextResponse } from "next/server";
-import { makeRecordFromName, normalizarNome, readParticipantes, writeParticipantes } from "@/lib/storage";
+import {
+  makeRecordFromName,
+  readParticipantes,
+  writeParticipantes,
+} from "@/lib/storage";
 
-function unauthorized() {
-  return NextResponse.json({ message: "Não autorizado." }, { status: 401 });
+function okSecret(req: Request) {
+  const expected = process.env.ADMIN_SECRET || "";
+  const got = req.headers.get("x-admin-secret") || "";
+  // Se você não usa segredo em dev, deixe ADMIN_SECRET vazio e libere localmente
+  if (!expected) return true;
+  return expected === got;
 }
 
 export async function POST(req: Request) {
-  const secret = process.env.ADMIN_SECRET;
-  const headerSecret = req.headers.get("x-admin-secret") || "";
-
-  if (!secret || headerSecret !== secret) return unauthorized();
+  if (!okSecret(req)) {
+    return NextResponse.json({ message: "Não autorizado." }, { status: 401 });
+  }
 
   const body = await req.json().catch(() => null);
+
   if (!Array.isArray(body)) {
-    return NextResponse.json({ message: "Envie um JSON: [{ nomeCompleto: "..." }, ...]" }, { status: 400 });
+    return NextResponse.json(
+      {
+        message:
+          'Envie um JSON no formato: [{"nomeCompleto":"Fulano"}, {"nomeCompleto":"Ciclano"}]',
+      },
+      { status: 400 },
+    );
   }
 
   const atual = await readParticipantes();
-  const mapa = new Map<string, any>();
-  for (const p of atual) mapa.set(p.nomeNormalizado, p);
 
-  let added = 0;
-  let nextId = atual.length + 1;
+  // Próximo ID numérico
+  let maxId = 0;
+  for (const p of atual as any[]) {
+    const n = Number(p?.id);
+    if (!Number.isNaN(n)) maxId = Math.max(maxId, n);
+  }
+  let nextId = maxId + 1;
 
-  for (const raw of body) {
-    const nomeCompleto = (raw?.nomeCompleto || raw?.nome || raw?.Nome || "").toString().trim();
+  let adicionados = 0;
+
+  for (const raw of body as any[]) {
+    const nomeCompleto = (raw?.nomeCompleto || raw?.nome || raw?.Nome || "")
+      .toString()
+      .trim();
     if (!nomeCompleto) continue;
 
-    const nomeNormalizado = normalizarNome(nomeCompleto);
-    if (mapa.has(nomeNormalizado)) continue;
+    // PARTICIPANTE é o padrão aqui (apoio entra pelo /import-apoio)
+    const rec = makeRecordFromName(
+      nomeCompleto,
+      String(nextId++),
+      "PARTICIPANTE",
+    );
 
-    const rec = makeRecordFromName(nomeCompleto, String(nextId));
-    nextId++;
-    mapa.set(rec.nomeNormalizado, rec);
-    added++;
+    atual.push(rec as any);
+    adicionados++;
   }
 
-  const lista = Array.from(mapa.values()).sort((a, b) => a.nomeCompleto.localeCompare(b.nomeCompleto));
-  await writeParticipantes(lista);
+  await writeParticipantes(atual as any);
 
-  return NextResponse.json({ message: "Importação concluída.", total: lista.length, added });
+  return NextResponse.json({
+    message: `Importação concluída: ${adicionados} registro(s).`,
+    adicionados,
+    total: atual.length,
+  });
 }
