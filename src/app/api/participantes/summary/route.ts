@@ -7,8 +7,6 @@ import { EQUIPES, type Equipe } from "@/lib/config";
 
 export async function GET() {
   const participantes = await readParticipantes();
-
-  // ✅ conta somente PARTICIPANTE (APOIO fica fora)
   const somenteParticipantes = participantes.filter(
     (p) => p.tipo === "PARTICIPANTE",
   );

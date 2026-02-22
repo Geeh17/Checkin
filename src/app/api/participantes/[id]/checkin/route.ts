@@ -21,7 +21,6 @@ export async function POST(_: Request, ctx: { params: { id: string } }) {
 
   const participante = participantes[idx];
 
-  // ✅ Idempotente
   if (participante.checkinRealizado) {
     return NextResponse.json({
       message: "Check-in já realizado.",
@@ -29,11 +28,9 @@ export async function POST(_: Request, ctx: { params: { id: string } }) {
     });
   }
 
-  // ✅ APOIO nunca entra em equipe
   if (participante.tipo === "APOIO") {
     participante.equipe = null;
   } else {
-    // ✅ Só PARTICIPANTE ganha equipe
     if (!participante.equipe) {
       const equipe = escolherEquipeBalanceada(participantes);
 

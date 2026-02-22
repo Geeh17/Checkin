@@ -11,14 +11,25 @@ import {
 function okSecret(req: Request) {
   const expected = process.env.ADMIN_SECRET || "";
   const got = req.headers.get("x-admin-secret") || "";
-  // Se você não usa segredo em dev, deixe ADMIN_SECRET vazio e libere localmente
+
+  if (process.env.NODE_ENV === "production" && !expected) return false;
+
   if (!expected) return true;
+
   return expected === got;
 }
 
 export async function POST(req: Request) {
   if (!okSecret(req)) {
-    return NextResponse.json({ message: "Não autorizado." }, { status: 401 });
+    return NextResponse.json(
+      {
+        message:
+          process.env.NODE_ENV === "production"
+            ? "ADMIN_SECRET não configurado/fornecido."
+            : "Não autorizado.",
+      },
+      { status: 401 },
+    );
   }
 
   const body = await req.json().catch(() => null);

@@ -28,9 +28,10 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  // ===== Resumo =====
   const [openResumo, setOpenResumo] = useState(false);
   const [resumo, setResumo] = useState<any>(null);
+
+  const abortRef = useRef<AbortController | null>(null);
 
   async function carregarResumo() {
     try {
@@ -42,7 +43,6 @@ export default function Home() {
     }
   }
 
-  // ===== Relatório / PDF =====
   const [openRelatorio, setOpenRelatorio] = useState(false);
   const [relatorio, setRelatorio] = useState<Participante[]>([]);
   const [filtroEquipe, setFiltroEquipe] = useState<"TODOS" | Equipe>("TODOS");
@@ -61,36 +61,44 @@ export default function Home() {
 
   const podeBuscar = useMemo(() => q.trim().length >= 2, [q]);
 
-  async function buscar() {
+  async function buscar(signal?: AbortSignal) {
     setMsg("");
+
     if (!podeBuscar) {
       setItems([]);
       return;
     }
+
     setLoading(true);
+
     try {
       const res = await fetch(
         `/api/participantes/search?q=${encodeURIComponent(q.trim())}`,
+        { signal },
       );
       const data = await res.json();
       setItems(
         (data.items || []).map((p: any) => ({ ...p, id: String(p.id) })),
       );
-    } catch {
-      setMsg("Falha ao buscar participantes.");
+    } catch (err: any) {
+      if (err?.name !== "AbortError") setMsg("Falha ao buscar participantes.");
     } finally {
-      setLoading(false);
+      if (!signal?.aborted) setLoading(false);
     }
   }
 
   async function checkin(id: string) {
     setMsg("");
+
+    abortRef.current?.abort();
+
     try {
       const res = await fetch(
         `/api/participantes/${encodeURIComponent(id)}/checkin`,
         { method: "POST" },
       );
       const data = await res.json();
+
       if (!res.ok) {
         setMsg(data.message || "Erro ao fazer check-in.");
         return;
@@ -113,12 +121,19 @@ export default function Home() {
   }
 
   useEffect(() => {
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+
     const t = setTimeout(() => {
-      if (podeBuscar) buscar();
+      if (podeBuscar) buscar(controller.signal);
       else setItems([]);
     }, 250);
-    return () => clearTimeout(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    return () => {
+      clearTimeout(t);
+      controller.abort();
+    };
   }, [q]);
 
   function listaEquipe(equipe: Equipe) {
@@ -241,7 +256,12 @@ export default function Home() {
           />
 
           <button
-            onClick={buscar}
+            onClick={() => {
+              abortRef.current?.abort();
+              const controller = new AbortController();
+              abortRef.current = controller;
+              buscar(controller.signal);
+            }}
             disabled={!podeBuscar || loading}
             style={{
               padding: "14px 16px",
@@ -409,7 +429,6 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* ===== MODAL RESUMO ===== */}
       {openResumo && (
         <div
           onClick={() => setOpenResumo(false)}
@@ -508,6 +527,7 @@ export default function Home() {
           </div>
         </div>
       )}
+
       {openRelatorio && (
         <div
           className="modalOverlay printOnly"

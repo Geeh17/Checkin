@@ -16,12 +16,10 @@ export async function GET(req: Request) {
   const items = participantes
     .filter((p: any) => (p?.nomeNormalizado || "").includes(q))
     .sort((a: any, b: any) => {
-      // ✅ Participantes primeiro (opcional, mas ajuda na operação)
-      const ta = a?.tipo === "APOIO" ? 1 : 0; // sem tipo -> PARTICIPANTE
+      const ta = a?.tipo === "APOIO" ? 1 : 0;
       const tb = b?.tipo === "APOIO" ? 1 : 0;
       if (ta !== tb) return ta - tb;
 
-      // ✅ Depois ordena por nome
       return (a?.nomeCompleto || "").localeCompare(b?.nomeCompleto || "");
     })
     .slice(0, 30);
