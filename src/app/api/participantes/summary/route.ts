@@ -3,26 +3,25 @@ export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import { readParticipantes } from "@/lib/storage";
-
-const EQUIPES = ["LARANJA", "VERDE", "VERMELHO"] as const;
+import { EQUIPES, type Equipe } from "@/lib/config";
 
 export async function GET() {
   const participantes = await readParticipantes();
 
   // ✅ conta somente PARTICIPANTE (APOIO fica fora)
   const somenteParticipantes = participantes.filter(
-    (p: any) => (p?.tipo || "PARTICIPANTE") === "PARTICIPANTE",
+    (p) => p.tipo === "PARTICIPANTE",
   );
 
-  const counts: Record<string, number> = { LARANJA: 0, VERDE: 0, VERMELHO: 0 };
+  const counts: Record<Equipe, number> = Object.fromEntries(
+    EQUIPES.map((e) => [e, 0]),
+  ) as Record<Equipe, number>;
+
   let semEquipe = 0;
 
   for (const p of somenteParticipantes) {
-    if (p.equipe && (counts as any)[p.equipe] !== undefined) {
-      counts[p.equipe] += 1;
-    } else {
-      semEquipe += 1;
-    }
+    if (p.equipe) counts[p.equipe] += 1;
+    else semEquipe += 1;
   }
 
   const total = somenteParticipantes.length;

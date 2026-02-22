@@ -508,8 +508,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-      {/* ===== MODAL RELATÓRIO / PDF ===== */}
       {openRelatorio && (
         <div
           className="modalOverlay printOnly"
