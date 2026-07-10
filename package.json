@@ -10,8 +10,8 @@
     "netlify:dev": "npx netlify dev"
   },
   "dependencies": {
-    "@netlify/blobs": "^8.2.0",
-    "next": "14.2.5",
+    "@netlify/blobs": "^10.7.0",
+    "next": "14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

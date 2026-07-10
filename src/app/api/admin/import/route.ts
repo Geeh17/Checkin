@@ -7,29 +7,11 @@ import {
   readParticipantes,
   writeParticipantes,
 } from "@/lib/storage";
-
-function okSecret(req: Request) {
-  const expected = process.env.ADMIN_SECRET || "";
-  const got = req.headers.get("x-admin-secret") || "";
-
-  if (process.env.NODE_ENV === "production" && !expected) return false;
-
-  if (!expected) return true;
-
-  return expected === got;
-}
+import { isAdminAuthorized, adminUnauthorizedResponse } from "@/lib/admin-auth";
 
 export async function POST(req: Request) {
-  if (!okSecret(req)) {
-    return NextResponse.json(
-      {
-        message:
-          process.env.NODE_ENV === "production"
-            ? "ADMIN_SECRET não configurado/fornecido."
-            : "Não autorizado.",
-      },
-      { status: 401 },
-    );
+  if (!isAdminAuthorized(req)) {
+    return adminUnauthorizedResponse();
   }
 
   const body = await req.json().catch(() => null);

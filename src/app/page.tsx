@@ -241,6 +241,8 @@ export default function Home() {
             onKeyDown={(e) => {
               if (e.key === "Enter" && items.length > 0) checkin(items[0].id);
             }}
+            aria-label="Buscar participante por nome"
+            autoComplete="off"
             placeholder="Digite o nome (ex.: manoel, ana, joão...)"
             style={{
               padding: "14px 12px",

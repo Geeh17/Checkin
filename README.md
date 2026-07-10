@@ -38,14 +38,16 @@ Sistema leve para **check-in por nome** (busca rápida, sem acento) com **distri
 A leitura/gravação está centralizada em:
 
 - `src/lib/storage.ts`
-  - `readParticipantes()`
-  - `writeParticipantes()`
+  - `readParticipantes()` / `writeParticipantes()` — usadas por rotas simples (busca, listagem, resumo, import, reset)
+  - `readParticipantesParaAtualizar()` / `writeParticipantesSeInalterado()` — usadas pelo **check-in**, com escrita condicional (ETag / `onlyIfMatch`) para evitar que dois check-ins simultâneos (ex.: dois celulares) se sobrescrevam
   - `normalizarNome()`
 
-O projeto mantém compatibilidade com uma chave “legada” (`participantes`) e também usa um formato “v2” (índice + itens):
+A chave `participantes` é a **fonte da verdade**. Um formato "v2" (índice + itens) é mantido apenas como espelho de compatibilidade, útil para inspecionar registros individuais na UI do Netlify Blobs — mas nunca é lido como fonte primária, evitando inconsistência entre os dois formatos:
 
 - `participantes:index` → lista de ids
 - `participantes:item:<id>` → item individual
+
+> Requer `@netlify/blobs` ^10.7.0 (escrita condicional com `onlyIfMatch`/`onlyIfNew` só existe a partir dessa geração do pacote).
 
 ### Fluxo principal
 

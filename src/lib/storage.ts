@@ -18,8 +18,14 @@ export type Participante = {
 
 const LOCAL_JSON_PATH = path.join(process.cwd(), "data", "participantes.json");
 
+// Chave única que é a FONTE DA VERDADE. Escritas nela usam ETag (onlyIfMatch)
+// para evitar que dois check-ins simultâneos (ex.: dois celulares) se
+// sobrescrevam ("last write wins" é o comportamento padrão do Netlify Blobs).
 const LEGACY_KEY = "participantes";
 
+// Mantido apenas como espelho de compatibilidade (formato "v2"), útil para
+// inspeção manual na UI do Netlify Blobs. NUNCA é usado como fonte de leitura
+// primária, para não haver inconsistência entre os dois formatos.
 const INDEX_KEY = "participantes:index";
 const ITEM_PREFIX = "participantes:item:";
 
@@ -33,30 +39,33 @@ export function normalizarNome(valor: string) {
     .toLowerCase();
 }
 
-function store() {
-  return getStore("checkin");
+function store(consistency: "strong" | "eventual" = "eventual") {
+  return getStore({ name: "checkin", consistency });
 }
 
 function normalizeList(input: any): Participante[] {
   const arr = Array.isArray(input) ? input : [];
-  return arr.map((p: any) => {
-    const nomeCompleto = String(p?.nomeCompleto ?? "");
-    const nomeNormalizado = String(
-      p?.nomeNormalizado ?? normalizarNome(nomeCompleto),
-    );
-    const id = String(p?.id ?? "");
+  return arr
+    .filter((p: any) => p != null) // remove entradas órfãs/corrompidas
+    .map((p: any) => {
+      const nomeCompleto = String(p?.nomeCompleto ?? "");
+      const nomeNormalizado = String(
+        p?.nomeNormalizado ?? normalizarNome(nomeCompleto),
+      );
+      const id = String(p?.id ?? "");
 
-    return {
-      ...p,
-      id,
-      nomeCompleto,
-      nomeNormalizado,
-      tipo: p?.tipo === "APOIO" ? "APOIO" : "PARTICIPANTE",
-      equipe: p?.equipe ?? null,
-      checkinRealizado: Boolean(p?.checkinRealizado),
-      checkinEm: p?.checkinEm ?? null,
-    } as Participante;
-  });
+      return {
+        ...p,
+        id,
+        nomeCompleto,
+        nomeNormalizado,
+        tipo: p?.tipo === "APOIO" ? "APOIO" : "PARTICIPANTE",
+        equipe: p?.equipe ?? null,
+        checkinRealizado: Boolean(p?.checkinRealizado),
+        checkinEm: p?.checkinEm ?? null,
+      } as Participante;
+    })
+    .filter((p) => p.id !== ""); // ids vazios não são registros válidos
 }
 
 function readLocal(): Participante[] {
@@ -65,100 +74,154 @@ function readLocal(): Participante[] {
   return normalizeList(raw);
 }
 
-async function readFromBlobV2(): Promise<Participante[] | null> {
-  const s = store();
+function writeLocal(lista: Participante[]) {
+  const payload = JSON.stringify(normalizeList(lista));
+  fs.mkdirSync(path.dirname(LOCAL_JSON_PATH), { recursive: true });
+  fs.writeFileSync(LOCAL_JSON_PATH, payload);
+}
 
-  const index: any = await s.get(INDEX_KEY, { type: "json" as any });
-  let ids: string[] = [];
+// Atualiza o espelho v2 (índice + itens). É "melhor esforço": falhas aqui
+// nunca devem derrubar uma operação de leitura/escrita real.
+async function mirrorToBlobV2(lista: Participante[]): Promise<void> {
+  try {
+    const s = store();
+    const normalized = normalizeList(lista);
+    const ids = normalized.map((p) => String(p.id));
 
-  if (Array.isArray(index)) ids = index.map((x) => String(x));
-  else if (typeof index === "string") {
-    try {
-      const parsed = JSON.parse(index);
-      if (Array.isArray(parsed)) ids = parsed.map((x) => String(x));
-    } catch {
-      ids = [];
-    }
+    await s.set(INDEX_KEY, JSON.stringify(ids));
+    await Promise.all(
+      normalized.map((p) => s.set(`${ITEM_PREFIX}${p.id}`, JSON.stringify(p))),
+    );
+  } catch {
+    // best-effort, ignore
   }
-
-  if (ids.length === 0) return null;
-
-  const items = await Promise.all(
-    ids.map(async (id) => {
-      const raw: any = await s.get(`${ITEM_PREFIX}${id}`, {
-        type: "json" as any,
-      });
-      return raw;
-    }),
-  );
-
-  return normalizeList(items);
 }
 
-async function writeToBlobV2(lista: Participante[]): Promise<void> {
-  const s = store();
-  const normalized = normalizeList(lista);
-
-  const ids = normalized.map((p) => String(p.id));
-  await s.set(INDEX_KEY, JSON.stringify(ids));
-
-  await Promise.all(
-    normalized.map((p) => s.set(`${ITEM_PREFIX}${p.id}`, JSON.stringify(p))),
-  );
-}
-
+/**
+ * Leitura simples, usada pelas rotas que não fazem read-modify-write
+ * (busca, listagem, resumo, import). Não precisa de ETag.
+ */
 export async function readParticipantes(): Promise<Participante[]> {
   try {
-    try {
-      const v2 = await readFromBlobV2();
-      if (v2 && v2.length > 0) return v2;
-    } catch {}
-
     const s = store();
-    const data: any = await s.get(LEGACY_KEY, { type: "json" as any });
+    const raw: any = await s.get(LEGACY_KEY, { type: "json" as any });
 
     let arr: any[] = [];
-    if (Array.isArray(data)) arr = data;
-    else if (typeof data === "string") arr = JSON.parse(data);
-    else arr = [];
+    if (Array.isArray(raw)) arr = raw;
+    else if (typeof raw === "string") arr = JSON.parse(raw);
 
-    const normalized = normalizeList(arr);
+    if (arr.length > 0) return normalizeList(arr);
 
-    if (normalized.length === 0) {
-      const local = readLocal();
-      if (local.length > 0) {
-        try {
-          await writeToBlobV2(local);
-          await s.set(LEGACY_KEY, JSON.stringify(local));
-        } catch {}
-        return local;
-      }
-    }
-
-    if (normalized.length > 0) {
+    // Blob vazio: tenta migrar a partir do arquivo local (primeiro boot).
+    const local = readLocal();
+    if (local.length > 0) {
       try {
-        await writeToBlobV2(normalized);
+        await s.set(LEGACY_KEY, JSON.stringify(normalizeList(local)), {
+          onlyIfNew: true,
+        });
+        mirrorToBlobV2(local);
       } catch {}
+      return local;
     }
 
-    return normalized;
+    return [];
   } catch {
+    // Sem Netlify Blobs disponível (dev local sem `netlify dev`) -> arquivo local.
     return readLocal();
   }
 }
 
+/**
+ * Escrita simples, sem controle de concorrência. Usada apenas em operações
+ * administrativas (import/reset) que não competem tipicamente com o fluxo
+ * de check-in do dia do evento.
+ */
 export async function writeParticipantes(lista: Participante[]): Promise<void> {
-  const payload = JSON.stringify(normalizeList(lista));
+  const normalized = normalizeList(lista);
+  const payload = JSON.stringify(normalized);
 
   try {
-    await writeToBlobV2(lista);
     const s = store();
     await s.set(LEGACY_KEY, payload);
+    mirrorToBlobV2(normalized);
     return;
-  } catch {}
+  } catch {
+    writeLocal(normalized);
+  }
+}
 
-  fs.mkdirSync(path.dirname(LOCAL_JSON_PATH), { recursive: true });
-  fs.writeFileSync(LOCAL_JSON_PATH, payload);
+export type ParticipantesParaAtualizar = {
+  list: Participante[];
+  etag: string | null;
+  mode: "blob-existente" | "blob-novo" | "local";
+};
+
+/**
+ * Leitura "para atualização": devolve também o ETag atual do blob, para que
+ * a escrita seguinte possa ser condicional (compare-and-swap) e assim evitar
+ * que dois check-ins concorrentes se percam um ao outro.
+ */
+export async function readParticipantesParaAtualizar(): Promise<ParticipantesParaAtualizar> {
+  try {
+    const s = store("strong");
+    const result: any = await s.getWithMetadata(LEGACY_KEY, {
+      type: "json" as any,
+    });
+
+    if (result) {
+      const raw = Array.isArray(result.data)
+        ? result.data
+        : typeof result.data === "string"
+          ? JSON.parse(result.data)
+          : [];
+      return { list: normalizeList(raw), etag: result.etag, mode: "blob-existente" };
+    }
+
+    // Chave ainda não existe: tenta popular a partir do arquivo local.
+    const local = readLocal();
+    return { list: local, etag: null, mode: "blob-novo" };
+  } catch {
+    return { list: readLocal(), etag: null, mode: "local" };
+  }
+}
+
+/**
+ * Escreve a lista de volta de forma condicional. Retorna `false` se outro
+ * processo escreveu no meio do caminho (o chamador deve reler e tentar de
+ * novo), e `true` em caso de sucesso.
+ */
+export async function writeParticipantesSeInalterado(
+  lista: Participante[],
+  etag: string | null,
+  mode: ParticipantesParaAtualizar["mode"],
+): Promise<boolean> {
+  const normalized = normalizeList(lista);
+  const payload = JSON.stringify(normalized);
+
+  if (mode === "local") {
+    writeLocal(normalized);
+    return true;
+  }
+
+  const s = store("strong");
+
+  try {
+    const { modified } =
+      mode === "blob-novo"
+        ? await s.set(LEGACY_KEY, payload, { onlyIfNew: true })
+        : await s.set(LEGACY_KEY, payload, { onlyIfMatch: etag as string });
+
+    if (modified) {
+      mirrorToBlobV2(normalized);
+      return true;
+    }
+
+    return false;
+  } catch {
+    // Netlify Blobs indisponível no meio da operação -> não há como garantir
+    // atomicidade; melhor falhar a tentativa do que arriscar sobrescrever.
+    return false;
+  }
 }
 
 export function makeRecordFromName(
